@@ -2,9 +2,9 @@
 Databases Module 1 Activity 1
 mod1_A1_student.sql
 
-student id:
-student name:
-last modified date:
+student id: 22298827
+student name: Christian Morabito
+last modified date: 24/10/23
 
 */
 
