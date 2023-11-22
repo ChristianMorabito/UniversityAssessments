@@ -21,7 +21,25 @@
 
 -- Insert into ENTRY
 
-
+INSERT INTO entry (
+    entry_id,
+    entry_starttime,
+    entry_finishtime,
+    char_name,
+    comp_no,
+    carn_date,
+    eventtype_code,
+    team_id
+) VALUES (
+    1,
+    TO_DATE('2023-11-22 08:00:00', 'YYYY-MM-DD HH24:MI:SS'),
+    TO_DATE('2023-11-22 09:30:00', 'YYYY-MM-DD HH24:MI:SS'),
+    'Charity A',
+    101,
+    TO_DATE('2023-11-22', 'YYYY-MM-DD'),
+    '5K',
+    1
+);
 
 
 
@@ -32,6 +50,10 @@
 
 
 -- Insert into TEAM
+
+
+
+-- Inserting test data into the team table
 
 
 
