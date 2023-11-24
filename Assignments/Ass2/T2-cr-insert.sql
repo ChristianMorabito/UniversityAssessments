@@ -1,27 +1,21 @@
---*****PLEASE ENTER YOUR DETAILS BELOW*****
 --T2-cr-insert.sql
 
 -- ITO Assignment 2 Task 2
 
---Student ID:
---Student Name:
+--Student ID:   22298827
+--Student Name: Christian Morabito
 
 /* Comments for your marker:
 
-
-
-
+    This script has 3 parts:
+        1) INSERT ENTRY data
+        2) INSERT TEAM data
+        3) UPDATE ENTRY datA
 */
-
-
--- ENSURE that your SQL code is formatted and has a semicolon (;)
--- at the end of every statement. When marked this will be run as
--- a script.
-
 
 -- Insert into ENTRY
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -42,7 +36,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -63,7 +57,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -84,7 +78,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -105,7 +99,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -126,7 +120,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -147,7 +141,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -168,7 +162,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -189,7 +183,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -210,7 +204,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -231,7 +225,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -252,7 +246,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -273,7 +267,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -294,7 +288,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -315,7 +309,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -336,7 +330,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -357,7 +351,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -378,7 +372,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -399,7 +393,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -420,7 +414,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -441,7 +435,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -461,7 +455,7 @@ INSERT INTO entry (
     NULL
 );
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -482,7 +476,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -503,7 +497,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -524,7 +518,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -545,7 +539,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -566,7 +560,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -587,7 +581,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -607,7 +601,7 @@ INSERT INTO entry (
     NULL
 );
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -627,7 +621,7 @@ INSERT INTO entry (
     NULL
 );
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -648,7 +642,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -668,7 +662,7 @@ INSERT INTO entry (
     NULL
 );
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -689,7 +683,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -710,7 +704,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -730,7 +724,7 @@ INSERT INTO entry (
     NULL
 );
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -752,7 +746,7 @@ INSERT INTO entry (
 
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -773,7 +767,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -794,7 +788,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -815,7 +809,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -837,7 +831,7 @@ INSERT INTO entry (
 
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -858,7 +852,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -879,7 +873,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -900,7 +894,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -921,7 +915,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -942,7 +936,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -963,7 +957,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -985,7 +979,7 @@ INSERT INTO entry (
 
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -1006,7 +1000,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -1027,7 +1021,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -1048,7 +1042,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -1069,7 +1063,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -1090,7 +1084,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -1111,7 +1105,7 @@ INSERT INTO entry (
 );
 
 
-INSERT INTO entry (
+INSERT INTO ENTRY (
     entry_id,
     entry_starttime,
     entry_finishtime,
@@ -1135,7 +1129,7 @@ INSERT INTO entry (
 -- Insert into TEAM
 
 
-INSERT INTO team (
+INSERT INTO TEAM (
     team_id,
     team_name,
     carn_date,
@@ -1152,7 +1146,7 @@ INSERT INTO team (
 );
 
 
-INSERT INTO team (
+INSERT INTO TEAM (
     team_id,
     team_name,
     carn_date,
@@ -1169,7 +1163,7 @@ INSERT INTO team (
 );
 
 
-INSERT INTO team (
+INSERT INTO TEAM (
     team_id,
     team_name,
     carn_date,
@@ -1186,7 +1180,7 @@ INSERT INTO team (
 );
 
 
-INSERT INTO team (
+INSERT INTO TEAM (
     team_id,
     team_name,
     carn_date,
@@ -1203,7 +1197,7 @@ INSERT INTO team (
 );
 
 
-INSERT INTO team (
+INSERT INTO TEAM (
     team_id,
     team_name,
     carn_date,
@@ -1220,7 +1214,7 @@ INSERT INTO team (
 );
 
 
-INSERT INTO team (
+INSERT INTO TEAM (
     team_id,
     team_name,
     carn_date,
@@ -1237,7 +1231,7 @@ INSERT INTO team (
 );
 
 
-INSERT INTO team (
+INSERT INTO TEAM (
     team_id,
     team_name,
     carn_date,
@@ -1254,7 +1248,7 @@ INSERT INTO team (
 );
 
 
-INSERT INTO team (
+INSERT INTO TEAM (
     team_id,
     team_name,
     carn_date,
@@ -1271,7 +1265,7 @@ INSERT INTO team (
 );
 
 
-INSERT INTO team (
+INSERT INTO TEAM (
     team_id,
     team_name,
     carn_date,
@@ -1288,7 +1282,7 @@ INSERT INTO team (
 );
 
 
-INSERT INTO team (
+INSERT INTO TEAM (
     team_id,
     team_name,
     carn_date,
@@ -1305,177 +1299,177 @@ INSERT INTO team (
 );
 
 
+-- Update ENTRY
 
-
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 1
 WHERE
     entry_id = 1;
     
     
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 1
 WHERE
     entry_id = 2;
     
     
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 1
 WHERE
     entry_id = 3;
     
     
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 2
 WHERE
     entry_id = 4;
     
     
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 2
 WHERE
     entry_id = 5;
     
     
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 2
 WHERE
     entry_id = 6;
     
     
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 3
 WHERE
     entry_id = 53;
 
 
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 3
 WHERE
     entry_id = 52;
 
 
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 4
 WHERE
     entry_id = 20;
     
     
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 4
 WHERE
     entry_id = 21;
     
     
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 4
 WHERE
     entry_id = 22;
     
 
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 5
 WHERE
     entry_id = 42;
     
 
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 5
 WHERE
     entry_id = 43;
     
 
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 6
 WHERE
     entry_id = 16;
     
 
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 6
 WHERE
     entry_id = 17;
     
     
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 6
 WHERE
     entry_id = 18;
     
 
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 7
 WHERE
     entry_id = 34;
     
     
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 7
 WHERE
     entry_id = 35;
     
 
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 8
 WHERE
     entry_id = 45;
     
 
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 8
 WHERE
     entry_id = 46;
     
 
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 9
 WHERE
     entry_id = 11;
 
 
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 9
 WHERE
     entry_id = 12;
     
     
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 10
 WHERE
     entry_id = 24;
     
     
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 10
 WHERE
     entry_id = 25;
 
 
-UPDATE entry
+UPDATE ENTRY
 SET
     team_id = 10
 WHERE
