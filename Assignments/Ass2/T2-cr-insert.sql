@@ -38,7 +38,7 @@ INSERT INTO entry (
     2,
     TO_DATE('19/SEP/2021', 'YYYY/MM/DD'),
     '10K',
-    NULL
+    1
 );
 
 
@@ -59,7 +59,7 @@ INSERT INTO entry (
     1,
     TO_DATE('19/SEP/2021', 'YYYY/MM/DD'),
     '10K',
-    NULL
+    1
 );
 
 
@@ -80,7 +80,7 @@ INSERT INTO entry (
     4,
     TO_DATE('19/SEP/2021', 'YYYY/MM/DD'),
     '10K',
-    NULL
+    1
 );
 
 
@@ -101,7 +101,7 @@ INSERT INTO entry (
     3,
     TO_DATE('19/SEP/2021', 'YYYY/MM/DD'),
     '10K',
-    NULL
+    2
 );
 
 
@@ -122,7 +122,7 @@ INSERT INTO entry (
     19,
     TO_DATE('19/SEP/2021', 'YYYY/MM/DD'),
     '10K',
-    NULL
+    2
 );
 
 
@@ -143,7 +143,7 @@ INSERT INTO entry (
     16,
     TO_DATE('19/SEP/2021', 'YYYY/MM/DD'),
     '10K',
-    NULL
+    2
 );
 
 
@@ -248,7 +248,7 @@ INSERT INTO entry (
     6,
     TO_DATE('19/SEP/2021', 'YYYY/MM/DD'),
     '5K',
-    NULL
+    9
 );
 
 
@@ -269,7 +269,7 @@ INSERT INTO entry (
     7,
     TO_DATE('19/SEP/2021', 'YYYY/MM/DD'),
     '5K',
-    NULL
+    9
 );
 
 
@@ -353,7 +353,7 @@ INSERT INTO entry (
     1,
     TO_DATE('04/SEP/2022', 'YYYY/MM/DD'),
     '10K',
-    NULL
+    6
 );
 
 
@@ -374,7 +374,7 @@ INSERT INTO entry (
     2,
     TO_DATE('04/SEP/2022', 'YYYY/MM/DD'),
     '10K',
-    NULL
+    6
 );
 
 
@@ -395,7 +395,7 @@ INSERT INTO entry (
     3,
     TO_DATE('04/SEP/2022', 'YYYY/MM/DD'),
     '10K',
-    NULL
+    6
 );
 
 
@@ -437,7 +437,7 @@ INSERT INTO entry (
     5,
     TO_DATE('04/SEP/2022', 'YYYY/MM/DD'),
     '5K',
-    NULL
+    4
 );
 
 
@@ -458,7 +458,7 @@ INSERT INTO entry (
     6,
     TO_DATE('04/SEP/2022', 'YYYY/MM/DD'),
     '5K',
-    NULL
+    4
 );
 
 INSERT INTO entry (
@@ -478,7 +478,7 @@ INSERT INTO entry (
     7,
     TO_DATE('04/SEP/2022', 'YYYY/MM/DD'),
     '5K',
-    NULL
+    4
 );
 
 
@@ -520,7 +520,7 @@ INSERT INTO entry (
     9,
     TO_DATE('04/SEP/2022', 'YYYY/MM/DD'),
     '3K',
-    NULL
+    10
 );
 
 
@@ -541,7 +541,7 @@ INSERT INTO entry (
     10,
     TO_DATE('04/SEP/2022', 'YYYY/MM/DD'),
     '3K',
-    NULL
+    10
 );
 
 
@@ -562,7 +562,7 @@ INSERT INTO entry (
     11,
     TO_DATE('04/SEP/2022', 'YYYY/MM/DD'),
     '3K',
-    NULL
+    10
 );
 
 
@@ -727,7 +727,7 @@ INSERT INTO entry (
     19,
     TO_DATE('01/FEB/2023', 'YYYY/MM/DD'),
     '10K',
-    NULL
+    7
 );
 
 INSERT INTO entry (
@@ -747,7 +747,7 @@ INSERT INTO entry (
     20,
     TO_DATE('01/FEB/2023', 'YYYY/MM/DD'),
     '10K',
-    NULL
+    7
 );
 
 
@@ -896,7 +896,7 @@ INSERT INTO entry (
     14,
     TO_DATE('08/SEP/2023', 'YYYY/MM/DD'),
     '42K',
-    NULL
+    5
 );
 
 
@@ -917,7 +917,7 @@ INSERT INTO entry (
     15,
     TO_DATE('08/SEP/2023', 'YYYY/MM/DD'),
     '42K',
-    NULL
+    5
 );
 
 
@@ -959,7 +959,7 @@ INSERT INTO entry (
     2,
     TO_DATE('20/FEB/2024', 'YYYY/MM/DD'),
     '10K',
-    NULL
+    8
 );
 
 
@@ -980,7 +980,7 @@ INSERT INTO entry (
     3,
     TO_DATE('20/FEB/2024', 'YYYY/MM/DD'),
     '10K',
-    NULL
+    8
 );
 
 
@@ -1107,7 +1107,7 @@ INSERT INTO entry (
     9,
     TO_DATE('20/FEB/2024', 'YYYY/MM/DD'),
     '5K',
-    NULL
+    3
 );
 
 
@@ -1128,11 +1128,182 @@ INSERT INTO entry (
     10,
     TO_DATE('20/FEB/2024', 'YYYY/MM/DD'),
     '5K',
-    NULL
+    3
 );
 
 
 -- Insert into TEAM
+
+
+INSERT INTO team (
+    team_id,
+    team_name,
+    carn_date,
+    team_no_members,
+    char_name,
+    entry_id
+) VALUES (
+    1,
+    'Honey Badgers',
+    TO_DATE('19/SEP/2021', 'YYYY/MM/DD'),
+    3,
+    NULL,
+    1
+);
+
+
+INSERT INTO team (
+    team_id,
+    team_name,
+    carn_date,
+    team_no_members,
+    char_name,
+    entry_id
+) VALUES (
+    2,
+    'Prince Capsicum',
+    TO_DATE('19/SEP/2021', 'YYYY/MM/DD'),
+    3,
+    'Beyond Blue',
+    6
+);
+
+
+INSERT INTO team (
+    team_id,
+    team_name,
+    carn_date,
+    team_no_members,
+    char_name,
+    entry_id
+) VALUES (
+    3,
+    'Da Aye Tea Yo',
+    TO_DATE('20/FEB/2024', 'YYYY/MM/DD'),
+    2,
+    'RSPCA',
+    53
+);
+
+
+INSERT INTO team (
+    team_id,
+    team_name,
+    carn_date,
+    team_no_members,
+    char_name,
+    entry_id
+) VALUES (
+    4,
+    'Captain Crutch',
+    TO_DATE('04/SEP/2022', 'YYYY/MM/DD'),
+    3,
+    'Amnesty International',
+    20
+);
+
+
+INSERT INTO team (
+    team_id,
+    team_name,
+    carn_date,
+    team_no_members,
+    char_name,
+    entry_id
+) VALUES (
+    5,
+    'The Possum Preachers',
+    TO_DATE('08/SEP/2023', 'YYYY/MM/DD'),
+    2,
+    'Salvation Army',
+    42
+);
+
+
+INSERT INTO team (
+    team_id,
+    team_name,
+    carn_date,
+    team_no_members,
+    char_name,
+    entry_id
+) VALUES (
+    6,
+    'The Found Propheteers',
+    TO_DATE('04/SEP/2022', 'YYYY/MM/DD'),
+    3,
+    'Beyond Blue',
+    16
+);
+
+
+INSERT INTO team (
+    team_id,
+    team_name,
+    carn_date,
+    team_no_members,
+    char_name,
+    entry_id
+) VALUES (
+    7,
+    'Run Forrest',
+    TO_DATE('01/FEB/2023', 'YYYY/MM/DD'),
+    2,
+    NULL,
+    34
+);
+
+
+INSERT INTO team (
+    team_id,
+    team_name,
+    carn_date,
+    team_no_members,
+    char_name,
+    entry_id
+) VALUES (
+    8,
+    'Fared Inn Kim',
+    TO_DATE('20/FEB/2024', 'YYYY/MM/DD'),
+    2,
+    'Salvation Army',
+    45
+);
+
+
+INSERT INTO team (
+    team_id,
+    team_name,
+    carn_date,
+    team_no_members,
+    char_name,
+    entry_id
+) VALUES (
+    9,
+    'Knott in Luv',
+    TO_DATE('19/SEP/2021', 'YYYY/MM/DD'),
+    2,
+    NULL,
+    11
+);
+
+
+INSERT INTO team (
+    team_id,
+    team_name,
+    carn_date,
+    team_no_members,
+    char_name,
+    entry_id
+) VALUES (
+    10,
+    'Hotdog Triggers',
+    TO_DATE('04/SEP/2022', 'YYYY/MM/DD'),
+    3,
+    'Amnesty International',
+    24
+);
+
 
 COMMIT;
 
