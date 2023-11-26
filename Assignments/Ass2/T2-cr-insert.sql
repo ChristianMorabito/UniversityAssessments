@@ -7,10 +7,6 @@
 
 /* Comments for your marker:
 
-    This script has 3 parts:
-        1) INSERT ENTRY data
-        2) INSERT TEAM data
-        3) UPDATE ENTRY datA
 */
 
 -- Insert into ENTRY
@@ -971,7 +967,7 @@ INSERT INTO ENTRY (
     TO_DATE('20/FEB/2024 08:00:22', 'DD/MON/YYYY HH24:MI:SS'),
     TO_DATE('20/FEB/2024 11:07:43', 'DD/MON/YYYY HH24:MI:SS'),
     'RSPCA',
-    3,
+    20,
     TO_DATE('20/FEB/2024', 'DD/MON/YYYY'),
     '10K',
     NULL
@@ -1103,7 +1099,6 @@ INSERT INTO ENTRY (
     '5K',
     NULL
 );
-
 
 INSERT INTO ENTRY (
     entry_id,
