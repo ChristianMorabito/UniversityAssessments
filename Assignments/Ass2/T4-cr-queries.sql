@@ -19,7 +19,7 @@
 */
 
 SELECT
-    TO_CHAR(TO_DATE('08/SEP/23', 'DD/MON/RR'), 'Dy DD Month YYYY')
+    TO_CHAR(TO_DATE(car.carn_date, 'DD/MON/YY'), 'Dy DD Month YYYY')
         AS CARNIVAL_DATE,
     carn_name as CARNNAME,
     ett.eventtype_desc as EVENTTYPEDESC,
