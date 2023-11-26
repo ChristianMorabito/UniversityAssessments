@@ -55,7 +55,7 @@ INSERT INTO ENTRY (
             comp_phone = '1234567890'
     ), (
         SELECT
-            carn_date
+            TO_DATE(carn_date, 'DD/MON/YYYY')
         FROM   
             carnival
         WHERE
@@ -82,10 +82,10 @@ WHERE
         FROM
             entry
         WHERE
-            carn_date = 
+            TO_DATE(carn_date, 'DD/MON/YYYY') = 
             (
                 SELECT
-                    carn_date
+                    TO_DATE(carn_date, 'DD/MON/YYYY')
                 FROM    
                     carnival
                 WHERE
@@ -116,7 +116,7 @@ INSERT INTO TEAM (
     'Kenya Speedstars',
     (
         SELECT
-            carn_date
+            TO_DATE(carn_date, 'DD/MON/YYYY')
         FROM    
             carnival
         WHERE
@@ -138,10 +138,10 @@ WHERE
         FROM
             entry
         WHERE
-            carn_date = 
+            TO_DATE(carn_date, 'DD/MON/YYYY') = 
             (
                 SELECT
-                    carn_date
+                    TO_DATE(carn_date, 'DD/MON/YYYY')
                 FROM    
                     carnival
                 WHERE
@@ -191,10 +191,10 @@ WHERE
         FROM
             entry
         WHERE
-            carn_date = 
+            TO_DATE(carn_date, 'DD/MON/YYYY') = 
             (
                 SELECT
-                    carn_date
+                    TO_DATE(carn_date, 'DD/MON/YYYY')
                 FROM    
                     carnival
                 WHERE
