@@ -67,6 +67,16 @@ ORDER BY
 */
 
 
+SELECT
+    c.comp_lname AS COMPLNAME,
+    c.comp_gender AS COMPGENDER,
+    count(ent.carn_date) as asfd
+FROM
+    entry ent
+    JOIN competitor c ON c.comp_no = ent.comp_no 
+    JOIN carnival car ON car.carn_date = ent.carn_date
+GROUP BY
+    c.comp_no, c.comp_lname, c.comp_gender
 
 /*
 (d) 
