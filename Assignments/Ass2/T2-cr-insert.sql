@@ -1121,6 +1121,26 @@ INSERT INTO ENTRY (
 );
 
 
+INSERT INTO ENTRY (
+    entry_id,
+    entry_starttime,
+    entry_finishtime,
+    char_name,
+    comp_no,
+    carn_date,
+    eventtype_code,
+    team_id
+) VALUES (
+    54,
+    TO_DATE('08/SEP/2023 10:04:55', 'DD/MON/YYYY HH24:MI:SS'),
+    TO_DATE('08/SEP/2023 18:42:34', 'DD/MON/YYYY HH24:MI:SS'),
+    'Beyond Blue',
+    1,
+    TO_DATE('08/SEP/2023', 'DD/MON/YYYY'),
+    '42K',
+    NULL
+);
+
 -- Insert into TEAM
 
 
@@ -1377,7 +1397,7 @@ UPDATE ENTRY
 SET
     team_id = 5
 WHERE
-    entry_id = 42;
+    entry_id = 41;
     
 
 UPDATE ENTRY

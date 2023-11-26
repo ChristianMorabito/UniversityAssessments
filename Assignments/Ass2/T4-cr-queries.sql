@@ -34,11 +34,31 @@ WHERE
 ORDER BY
     car.carn_date, fullname;
 
- 
-
 /*
 (b)
 */ 
+
+-- ENTRY (char_name)
+-- COMPETITOR
+-- EVENTTYPE
+-- CHARITY
+
+SELECT
+    TO_DATE(ent.carn_date, 'DD/MON/YY') AS CARNIVAL_DATE,
+    comp_fname || ' ' || comp_lname AS RUNNER,
+    ch.char_name AS CHARITY,
+    char_contact AS CHARITY_CONTACT,
+    eventtype_desc AS EVENT_DESCRIPTION
+FROM
+    entry ent
+    JOIN eventtype ett ON ett.eventtype_code = ent.eventtype_code
+    JOIN competitor c ON c.comp_no = ent.comp_no 
+    JOIN charity ch ON ch.char_name = ent.char_name
+WHERE
+    ent.eventtype_code = '42K'
+    AND team_id IS NULL
+ORDER BY
+    carnival_date, charity, runner;
 
 
 
