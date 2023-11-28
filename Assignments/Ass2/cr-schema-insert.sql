@@ -10,7 +10,7 @@
   data requirements.
 
 Author: FIT Database Teaching Team
-License: Copyright Â© Monash University, unless otherwise stated. All Rights Reserved.
+License: Copyright © Monash University, unless otherwise stated. All Rights Reserved.
 COPYRIGHT WARNING
 Warning
 This material is protected by copyright. For use within Monash University only. NOT FOR RESALE.

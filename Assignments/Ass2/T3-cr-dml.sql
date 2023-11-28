@@ -17,6 +17,11 @@
 -- at the end of every statement. When marked this will be run as
 -- a script.
 
+-- drop sequences to establish clean slate
+DROP SEQUENCE comp_seq;
+DROP SEQUENCE entry_seq;
+DROP SEQUENCE team_seq;
+
 /*
 (a)
 */
