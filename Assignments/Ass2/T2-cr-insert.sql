@@ -615,47 +615,6 @@ INSERT INTO ENTRY (
     NULL
 );
 
---
---INSERT INTO ENTRY (
---    entry_id,
---    entry_starttime,
---    entry_finishtime,
---    char_name,
---    comp_no,
---    carn_date,
---    eventtype_code,
---    team_id
---) VALUES (
---    31,
---    TO_DATE('01/FEB/2023 11:30:34', 'DD/MON/YYYY HH24:MI:SS'),
---    TO_DATE('01/FEB/2023 13:11:32', 'DD/MON/YYYY HH24:MI:SS'),
---    'RSPCA',
---    16,
---    TO_DATE('01/FEB/2023', 'DD/MON/YYYY'),
---    '21K',
---    NULL
---);
---
---INSERT INTO ENTRY (
---    entry_id,
---    entry_starttime,
---    entry_finishtime,
---    char_name,
---    comp_no,
---    carn_date,
---    eventtype_code,
---    team_id
---) VALUES (
---    32,
---    TO_DATE('01/FEB/2023 11:33:06', 'DD/MON/YYYY HH24:MI:SS'),
---    TO_DATE('01/FEB/2023 13:00:23', 'DD/MON/YYYY HH24:MI:SS'),
---    NULL,
---    17,
---    TO_DATE('01/FEB/2023', 'DD/MON/YYYY'),
---    '21K',
---    NULL
---);
-
 
 INSERT INTO ENTRY (
     entry_id,
@@ -1148,7 +1107,7 @@ INSERT INTO TEAM (
     entry_id
 ) VALUES (
     2,
-    'Prince Capsicum',
+    'Captain Crutch',
     TO_DATE('19/SEP/2021', 'DD/MON/YYYY'),
     3,
     'Beyond Blue',

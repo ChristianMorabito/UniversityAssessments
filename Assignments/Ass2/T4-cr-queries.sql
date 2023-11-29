@@ -19,21 +19,22 @@
 */
 
 SELECT
-    TO_CHAR(TO_DATE(car.carn_date, 'DD/MON/YY'), 'Dy DD Month YYYY')
+    TO_CHAR(TO_DATE(carn_date, 'DD/MON/YY'), 'Dy DD Month YYYY')
         AS CARNIVAL_DATE,
     carn_name as CARNNAME,
-    ett.eventtype_desc as EVENTTYPEDESC,
+    eventtype_desc as EVENTTYPEDESC,
     comp_fname || ' ' || comp_lname AS FULLNAME
 FROM
-    competitor c
-    JOIN entry ent ON ent.comp_no = c.comp_no
-    JOIN eventtype ett ON ett.eventtype_code = ent.eventtype_code
-    JOIN carnival car ON car.carn_date = ent.carn_date  
+    competitor 
+    NATURAL JOIN entry
+    NATURAL JOIN eventtype
+    NATURAL JOIN carnival
 WHERE
     UPPER(comp_email) LIKE UPPER('%gmail.com')
 ORDER BY
     CARNIVAL_DATE,
     FULLNAME;
+    
 
 /*
 (b)
@@ -42,22 +43,21 @@ ORDER BY
 SELECT
     TO_CHAR(ent.carn_date, 'DD-Mon-YYYY') AS CARNIVAL_DATE,
     comp_fname || ' ' || comp_lname AS RUNNER,
-    ch.char_name AS CHARITY,
+    char_name AS CHARITY,
     char_contact AS CHARITY_CONTACT,
     eventtype_desc AS EVENT_DESCRIPTION
 FROM
     entry ent
-    JOIN eventtype ett ON ett.eventtype_code = ent.eventtype_code
-    JOIN competitor c ON c.comp_no = ent.comp_no 
-    JOIN charity ch ON ch.char_name = ent.char_name
+    NATURAL JOIN eventtype
+    NATURAL JOIN competitor
+    NATURAL JOIN charity
 WHERE
-    UPPER(ent.eventtype_code) = UPPER('42K')
+    UPPER(eventtype_code) = UPPER('42K')
     AND team_id IS NULL
 ORDER BY
     CARNIVAL_DATE,
     CHARITY,
     RUNNER;
-
 
 /*
 (c)
@@ -99,18 +99,18 @@ ORDER BY
 */
 
 SELECT
-    TO_CHAR(c.carn_date, 'DD-Mon-YYYY') AS CARNIVAL_DATE,
-    c.carn_name AS CARNNAME,
-    COUNT(e.entry_id) AS TOTAL_ENTRIES5KM
+    TO_CHAR(carn_date, 'DD-Mon-YYYY') AS CARNIVAL_DATE,
+    carn_name AS CARNNAME,
+    COUNT(entry_id) AS TOTAL_ENTRIES5KM
 FROM
-    carnival c
-    JOIN entry e ON c.carn_date = e.carn_date
+    carnival
+    NATURAL JOIN entry
 WHERE
-    c.carn_date BETWEEN TO_DATE('01-Jan-2023', 'DD-Mon-YYYY') 
-    AND TO_DATE('31-Dec-2023', 'DD-Mon-YYYY')
-    AND e.eventtype_code = '5K'
+    TO_CHAR(carn_date, 'YYYY') = '2023'
+    AND UPPER(eventtype_code) = UPPER('5K')
 GROUP BY
-    c.carn_date, c.carn_name
+    carn_date,
+    carn_name
 ORDER BY
     TOTAL_ENTRIES5KM DESC,
     CARNIVAL_DATE;
@@ -131,17 +131,37 @@ FROM
     JOIN eventtype et ON et.eventtype_code = ev.eventtype_code
     LEFT JOIN entry ent ON ent.carn_date = c.carn_date 
         AND ent.eventtype_code = et.eventtype_code
-
+        
 WHERE 
     ent.carn_date IS NULL
 
 ORDER BY
     CARNIVAL_DATE,
     EVENTTYPEDESC;
-
-
+    
 
 /*
 (f)
 */
+
+SELECT 
+    t.team_name AS TEAMNAME, 
+    TO_CHAR(t.carn_date, 'DD-Mon-YYYY') AS CARNIVAL_DATE, 
+    TO_CHAR(c.comp_no, '0000') || ' ' 
+        || c.comp_fname || ' ' ||  c.comp_lname AS TEAMLEADER, 
+    t.team_no_members AS TEAMNOMEMBERS
+FROM 
+    team t
+    JOIN entry e ON e.entry_id = t.entry_id
+    JOIN competitor c ON c.comp_no = t.entry_id 
+GROUP BY 
+    t.team_name,
+    t.carn_date,
+    c.comp_no,
+    c.comp_fname,
+    c.comp_lname,
+    t.team_no_members
+ORDER BY 
+    TEAMNAME,
+    CARNIVAL_DATE;
 
