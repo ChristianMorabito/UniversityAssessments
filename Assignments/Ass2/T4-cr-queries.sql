@@ -30,18 +30,14 @@ FROM
     JOIN eventtype ett ON ett.eventtype_code = ent.eventtype_code
     JOIN carnival car ON car.carn_date = ent.carn_date  
 WHERE
-    comp_email LIKE '%gmail.com'
+    UPPER(comp_email) LIKE UPPER('%gmail.com')
 ORDER BY
-    car.carn_date, fullname;
+    car.carn_date,
+    fullname;
 
 /*
 (b)
 */ 
-
--- ENTRY (char_name)
--- COMPETITOR
--- EVENTTYPE
--- CHARITY
 
 SELECT
     TO_DATE(ent.carn_date, 'DD/MON/YY') AS CARNIVAL_DATE,
@@ -55,43 +51,50 @@ FROM
     JOIN competitor c ON c.comp_no = ent.comp_no 
     JOIN charity ch ON ch.char_name = ent.char_name
 WHERE
-    ent.eventtype_code = '42K'
+    UPPER(ent.eventtype_code) = UPPER('42K')
     AND team_id IS NULL
 ORDER BY
     carnival_date, charity, runner;
 
 
-
 /*
 (c)
 */
-select * from entry where comp_no = 1;
 
 SELECT
     c.comp_no AS COMPNO,
     c.comp_fname AS COMPFNAME,
     c.comp_lname AS COMPLNAME,
     c.comp_gender AS COMPGENDER,
-    count(EXTRACT(year FROM ent.carn_date)),
-    count(EXTRACT(year FROM ent.carn_date))
-    
-    
-
+    COUNT(DISTINCT e1.entry_id) AS TWOYRSBACK,
+    COUNT(DISTINCT e2.entry_id) AS LASTCALYEAR,
+    CASE WHEN COUNT(DISTINCT e3.entry_id) = 0 
+        THEN 'Completed No Runs' 
+        ELSE TO_CHAR(COUNT(DISTINCT e3.entry_id)) END AS LAST2CALENDARYEARS
 FROM
-    entry ent
-    JOIN competitor c ON c.comp_no = ent.comp_no 
-    JOIN carnival car ON car.carn_date = ent.carn_date
-WHERE
-    EXTRACT(YEAR FROM SYSDATE) BETWEEN EXTRACT(YEAR FROM ent.carn_date) - 2
-    AND EXTRACT(YEAR FROM SYSDATE)
+    competitor c
+LEFT JOIN
+    entry e1 ON c.comp_no = e1.comp_no AND e1.carn_date 
+    BETWEEN TO_DATE(EXTRACT(YEAR FROM SYSDATE)-2, 'YYYY')
+    AND TO_DATE(EXTRACT(YEAR FROM SYSDATE)-1, 'YYYY')
+LEFT JOIN
+    entry e2 ON c.comp_no = e2.comp_no AND e2.carn_date 
+    BETWEEN TO_DATE(EXTRACT(YEAR FROM SYSDATE)-1, 'YYYY')
+    AND TO_DATE(EXTRACT(YEAR FROM SYSDATE), 'YYYY')
+LEFT JOIN
+    entry e3 ON c.comp_no = e3.comp_no AND e3.carn_date
+        BETWEEN TO_DATE(EXTRACT(YEAR FROM SYSDATE)-2, 'YYYY')
+        AND TO_DATE(EXTRACT(YEAR FROM SYSDATE), 'YYYY')
 GROUP BY
     c.comp_no,
     c.comp_fname,
     c.comp_lname,
-    c.comp_gender;
+    c.comp_gender
+ORDER BY
+    LAST2CALENDARYEARS DESC,
+    c.comp_no;
     
-    
-    
+
 
 /*
 (d) 

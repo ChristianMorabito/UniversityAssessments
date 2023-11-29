@@ -74,25 +74,25 @@ INSERT INTO ENTRY (
 );
 
 
-INSERT INTO ENTRY (
-    entry_id,
-    entry_starttime,
-    entry_finishtime,
-    char_name,
-    comp_no,
-    carn_date,
-    eventtype_code,
-    team_id
-) VALUES (
-    4,
-    TO_DATE('19/SEP/2021 08:00:01', 'DD/MON/YYYY HH24:MI:SS'),
-    TO_DATE('19/SEP/2021 09:16:59', 'DD/MON/YYYY HH24:MI:SS'),
-    'Beyond Blue',
-    3,
-    TO_DATE('19/SEP/2021', 'DD/MON/YYYY'),
-    '10K',
-    NULL
-);
+--INSERT INTO ENTRY (
+--    entry_id,
+--    entry_starttime,
+--    entry_finishtime,
+--    char_name,
+--    comp_no,
+--    carn_date,
+--    eventtype_code,
+--    team_id
+--) VALUES (
+--    4,
+--    TO_DATE('19/SEP/2021 08:00:01', 'DD/MON/YYYY HH24:MI:SS'),
+--    TO_DATE('19/SEP/2021 09:16:59', 'DD/MON/YYYY HH24:MI:SS'),
+--    'Beyond Blue',
+--    3,
+--    TO_DATE('19/SEP/2021', 'DD/MON/YYYY'),
+--    '10K',
+--    NULL
+--);
 
 
 INSERT INTO ENTRY (
@@ -366,28 +366,6 @@ INSERT INTO ENTRY (
     '10K',
     NULL
 );
-
-
-INSERT INTO ENTRY (
-    entry_id,
-    entry_starttime,
-    entry_finishtime,
-    char_name,
-    comp_no,
-    carn_date,
-    eventtype_code,
-    team_id
-) VALUES (
-    18,
-    TO_DATE('04/SEP/2022 08:00:16', 'DD/MON/YYYY HH24:MI:SS'),
-    TO_DATE('04/SEP/2022 10:00:19', 'DD/MON/YYYY HH24:MI:SS'),
-    NULL,
-    3,
-    TO_DATE('04/SEP/2022', 'DD/MON/YYYY'),
-    '10K',
-    NULL
-);
-
 
 INSERT INTO ENTRY (
     entry_id,
