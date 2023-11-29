@@ -922,8 +922,8 @@ INSERT INTO ENTRY (
     team_id
 ) VALUES (
     44,
-    TO_DATE('20/FEB/2024 08:03:25', 'DD/MON/YYYY HH24:MI:SS'),
-    TO_DATE('20/FEB/2024 11:00:54', 'DD/MON/YYYY HH24:MI:SS'),
+    NULL,
+    NULL,
     'RSPCA',
     1,
     TO_DATE('20/FEB/2024', 'DD/MON/YYYY'),
@@ -943,8 +943,8 @@ INSERT INTO ENTRY (
     team_id
 ) VALUES (
     45,
-    TO_DATE('20/FEB/2024 08:03:43', 'DD/MON/YYYY HH24:MI:SS'),
-    TO_DATE('20/FEB/2024 11:23:45', 'DD/MON/YYYY HH24:MI:SS'),
+    NULL,
+    NULL,
     NULL,
     2,
     TO_DATE('20/FEB/2024', 'DD/MON/YYYY'),
@@ -964,8 +964,8 @@ INSERT INTO ENTRY (
     team_id
 ) VALUES (
     46,
-    TO_DATE('20/FEB/2024 08:00:22', 'DD/MON/YYYY HH24:MI:SS'),
-    TO_DATE('20/FEB/2024 11:07:43', 'DD/MON/YYYY HH24:MI:SS'),
+    NULL,
+    NULL,
     'RSPCA',
     20,
     TO_DATE('20/FEB/2024', 'DD/MON/YYYY'),
@@ -986,8 +986,8 @@ INSERT INTO ENTRY (
     team_id
 ) VALUES (
     47,
-    TO_DATE('20/FEB/2024 12:07:23', 'DD/MON/YYYY HH24:MI:SS'),
-    TO_DATE('20/FEB/2024 16:31:31', 'DD/MON/YYYY HH24:MI:SS'),
+    NULL,
+    NULL,
     'Salvation Army',
     4,
     TO_DATE('20/FEB/2024', 'DD/MON/YYYY'),
@@ -1007,8 +1007,8 @@ INSERT INTO ENTRY (
     team_id
 ) VALUES (
     48,
-    TO_DATE('20/FEB/2024 12:07:53', 'DD/MON/YYYY HH24:MI:SS'),
-    TO_DATE('20/FEB/2024 16:43:54', 'DD/MON/YYYY HH24:MI:SS'),
+    NULL,
+    NULL,
     'Beyond Blue',
     5,
     TO_DATE('20/FEB/2024', 'DD/MON/YYYY'),
@@ -1028,8 +1028,8 @@ INSERT INTO ENTRY (
     team_id
 ) VALUES (
     49,
-    TO_DATE('20/FEB/2024 12:36:23', 'DD/MON/YYYY HH24:MI:SS'),
-    TO_DATE('20/FEB/2024 15:54:11', 'DD/MON/YYYY HH24:MI:SS'),
+    NULL,
+    NULL,
     'Salvation Army',
     6,
     TO_DATE('20/FEB/2024', 'DD/MON/YYYY'),
@@ -1049,8 +1049,8 @@ INSERT INTO ENTRY (
     team_id
 ) VALUES (
     50,
-    TO_DATE('20/FEB/2024 13:56:23', 'DD/MON/YYYY HH24:MI:SS'),
-    TO_DATE('20/FEB/2024 14:56:33', 'DD/MON/YYYY HH24:MI:SS'),
+    NULL,
+    NULL,
     NULL,
     7,
     TO_DATE('20/FEB/2024', 'DD/MON/YYYY'),
@@ -1070,8 +1070,8 @@ INSERT INTO ENTRY (
     team_id
 ) VALUES (
     51,
-    TO_DATE('20/FEB/2024 13:51:12', 'DD/MON/YYYY HH24:MI:SS'),
-    TO_DATE('20/FEB/2024 15:00:52', 'DD/MON/YYYY HH24:MI:SS'),
+    NULL,
+    NULL,
     'RSPCA',
     8,
     TO_DATE('20/FEB/2024', 'DD/MON/YYYY'),
@@ -1091,8 +1091,8 @@ INSERT INTO ENTRY (
     team_id
 ) VALUES (
     52,
-    TO_DATE('20/FEB/2024 13:43:42', 'DD/MON/YYYY HH24:MI:SS'),
-    TO_DATE('20/FEB/2024 15:56:33', 'DD/MON/YYYY HH24:MI:SS'),
+    NULL,
+    NULL,
     'Beyond Blue',
     9,
     TO_DATE('20/FEB/2024', 'DD/MON/YYYY'),
@@ -1111,8 +1111,8 @@ INSERT INTO ENTRY (
     team_id
 ) VALUES (
     53,
-    TO_DATE('20/FEB/2024 13:54:11', 'DD/MON/YYYY HH24:MI:SS'),
-    TO_DATE('20/FEB/2024 15:43:02', 'DD/MON/YYYY HH24:MI:SS'),
+    NULL,
+    NULL,
     'RSPCA',
     10,
     TO_DATE('20/FEB/2024', 'DD/MON/YYYY'),
