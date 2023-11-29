@@ -32,15 +32,15 @@ FROM
 WHERE
     UPPER(comp_email) LIKE UPPER('%gmail.com')
 ORDER BY
-    car.carn_date,
-    fullname;
+    CARNIVAL_DATE,
+    FULLNAME;
 
 /*
 (b)
 */ 
 
 SELECT
-    TO_DATE(ent.carn_date, 'DD/MON/YY') AS CARNIVAL_DATE,
+    TO_CHAR(ent.carn_date, 'DD-Mon-YYYY') AS CARNIVAL_DATE,
     comp_fname || ' ' || comp_lname AS RUNNER,
     ch.char_name AS CHARITY,
     char_contact AS CHARITY_CONTACT,
@@ -54,7 +54,9 @@ WHERE
     UPPER(ent.eventtype_code) = UPPER('42K')
     AND team_id IS NULL
 ORDER BY
-    carnival_date, charity, runner;
+    CARNIVAL_DATE,
+    CHARITY,
+    RUNNER;
 
 
 /*
@@ -70,20 +72,18 @@ SELECT
     COUNT(DISTINCT e2.entry_id) AS LASTCALYEAR,
     CASE WHEN COUNT(DISTINCT e3.entry_id) = 0 
         THEN 'Completed No Runs' 
-        ELSE TO_CHAR(COUNT(DISTINCT e3.entry_id)) END AS LAST2CALENDARYEARS
+        ELSE TO_CHAR(COUNT(DISTINCT e3.entry_id))
+        END AS LAST2CALENDARYEARS
 FROM
     competitor c
-LEFT JOIN
-    entry e1 ON c.comp_no = e1.comp_no AND e1.carn_date 
-    BETWEEN TO_DATE(EXTRACT(YEAR FROM SYSDATE)-2, 'YYYY')
-    AND TO_DATE(EXTRACT(YEAR FROM SYSDATE)-1, 'YYYY')
-LEFT JOIN
-    entry e2 ON c.comp_no = e2.comp_no AND e2.carn_date 
-    BETWEEN TO_DATE(EXTRACT(YEAR FROM SYSDATE)-1, 'YYYY')
-    AND TO_DATE(EXTRACT(YEAR FROM SYSDATE), 'YYYY')
-LEFT JOIN
-    entry e3 ON c.comp_no = e3.comp_no AND e3.carn_date
-        BETWEEN TO_DATE(EXTRACT(YEAR FROM SYSDATE)-2, 'YYYY')
+    LEFT JOIN entry e1 ON c.comp_no = e1.comp_no 
+        AND e1.carn_date BETWEEN TO_DATE(EXTRACT(YEAR FROM SYSDATE)-2, 'YYYY')
+        AND TO_DATE(EXTRACT(YEAR FROM SYSDATE)-1, 'YYYY')
+    LEFT JOIN entry e2 ON c.comp_no = e2.comp_no
+        AND e2.carn_date BETWEEN TO_DATE(EXTRACT(YEAR FROM SYSDATE)-1, 'YYYY')
+        AND TO_DATE(EXTRACT(YEAR FROM SYSDATE), 'YYYY')
+    LEFT JOIN entry e3 ON c.comp_no = e3.comp_no 
+        AND e3.carn_date BETWEEN TO_DATE(EXTRACT(YEAR FROM SYSDATE)-2, 'YYYY')
         AND TO_DATE(EXTRACT(YEAR FROM SYSDATE), 'YYYY')
 GROUP BY
     c.comp_no,
@@ -92,17 +92,15 @@ GROUP BY
     c.comp_gender
 ORDER BY
     LAST2CALENDARYEARS DESC,
-    c.comp_no;
+    COMPNO;
     
-
-
 /*
 (d) 
 */
 
 SELECT
     TO_CHAR(c.carn_date, 'DD-Mon-YYYY') AS CARNIVAL_DATE,
-    c.carn_name,
+    c.carn_name AS CARNNAME,
     COUNT(e.entry_id) AS TOTAL_ENTRIES5KM
 FROM
     carnival c
@@ -115,7 +113,7 @@ GROUP BY
     c.carn_date, c.carn_name
 ORDER BY
     TOTAL_ENTRIES5KM DESC,
-    c.carn_date;
+    CARNIVAL_DATE;
 
 
 
@@ -123,8 +121,23 @@ ORDER BY
 (e) 
 */
 
+SELECT
+    TO_CHAR(c.carn_date, 'DD-Mon-YYYY') AS CARNIVAL_DATE,
+    c.carn_name AS CARNNAME,
+    et.eventtype_desc AS EVENTTYPEDESC
+FROM
+    carnival c
+    JOIN event ev ON ev.carn_date = c.carn_date
+    JOIN eventtype et ON et.eventtype_code = ev.eventtype_code
+    LEFT JOIN entry ent ON ent.carn_date = c.carn_date 
+        AND ent.eventtype_code = et.eventtype_code
 
+WHERE 
+    ent.carn_date IS NULL
 
+ORDER BY
+    CARNIVAL_DATE,
+    EVENTTYPEDESC;
 
 
 
