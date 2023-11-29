@@ -17,7 +17,6 @@
 -- at the end of every statement. When marked this will be run as
 -- a script.
 
--- drop sequences to establish clean slate
 DROP SEQUENCE comp_seq;
 DROP SEQUENCE entry_seq;
 DROP SEQUENCE team_seq;
@@ -48,7 +47,16 @@ INSERT INTO ENTRY (
     entry_seq.NEXTVAL,
     NULL,
     NULL,
-    'Amnesty International',
+        -- charity name
+    (
+        SELECT
+            char_name
+        FROM
+            charity
+        WHERE
+            UPPER(char_name) = UPPER('Amnesty International')
+    ),
+        -- competitor number
     (
         SELECT
             comp_no
@@ -56,7 +64,9 @@ INSERT INTO ENTRY (
             competitor
         WHERE
             comp_phone = '1234567890'
-    ), (
+    ),
+        -- carnival date
+    (
         SELECT
             carn_date
         FROM   
@@ -64,7 +74,24 @@ INSERT INTO ENTRY (
         WHERE
             UPPER(carn_name) = UPPER('CR Summer Series Melbourne 2024')
     ),
-    '21K',
+        -- eventtype code
+    (
+        SELECT
+            eventtype_code
+        FROM
+            event
+        WHERE
+            UPPER(eventtype_code) = UPPER('21K')
+            AND carn_date = 
+            (
+                SELECT
+                    carn_date
+                FROM
+                    carnival
+                WHERE
+                    UPPER(carn_name) = UPPER('CR Summer Series Melbourne 2024')
+            )
+    ),
     NULL
 );
 
