@@ -24,17 +24,22 @@ SET PAGESIZE 200
 
 
 SELECT
-    JSON_OBJECT (
-        '_id' VALUE TO_CHAR(ent.carn_date, 'DDMMYYYY') || '_' || ent.eventtype_code,
+    JSON_OBJECT 
+    (
+        '_id' VALUE TO_CHAR(ent.carn_date, 'DDMMYYYY')
+            || '_' || ent.eventtype_code,
         'carnival_date' VALUE TO_CHAR(ent.carn_date, 'DD-Mon-YYYY'),
         'carnival_location' VALUE ca.carn_location,
-        'event' VALUE JSON_OBJECT (
+        'event' VALUE JSON_OBJECT
+        (
             'type' VALUE ent.eventtype_code,
             'description' VALUE ett.eventtype_desc
         ),
         'no_competitors' VALUE COUNT(ent.comp_no),
-        'competitors' VALUE JSON_ARRAYAGG (
-            JSON_OBJECT (
+        'competitors' VALUE JSON_ARRAYAGG
+        (
+            JSON_OBJECT
+            (
                 'comp_no' VALUE ent.comp_no,
                 'name' VALUE c.comp_fname || ' ' || c.comp_lname,
                 'gender' VALUE 
@@ -44,9 +49,10 @@ SELECT
                         ELSE 'Undisclosed'
                     END,
                 'phone' VALUE c.comp_phone
-        )
+            )
                         
-    ) FORMAT JSON ) || ','
+    ) 
+    FORMAT JSON ) || ','
     
 FROM
     entry ent
