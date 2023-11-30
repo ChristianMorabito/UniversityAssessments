@@ -51,8 +51,7 @@ SELECT
                 'phone' VALUE c.comp_phone
             )
                         
-    ) 
-    FORMAT JSON ) || ','
+        ) FORMAT JSON ) || ','
     
 FROM
     entry ent

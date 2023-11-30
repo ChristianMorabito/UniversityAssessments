@@ -506,16 +506,18 @@ db.events.find(
     }
   );
 
-
-
-
-
 //(e)
 // PLEASE PLACE REQUIRED MONGODB COMMAND/S FOR THIS PART HERE
 // ENSURE that your query is formatted and has a semicolon
 // (;) at the end of this answer
 
-
+db.events.updateMany(
+    { "carnival_date": "01-Feb-2023" },
+    { $set: { "carnival_location": "Lake Gillawarna, Georges Hill, 2198" } }
+  );
+  
+  // Confirm the change
+  db.events.find({ "carnival_date": "01-Feb-2023" });
 
 
 
