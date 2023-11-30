@@ -153,8 +153,49 @@ INSERT INTO TEAM (
             UPPER(carn_name) = UPPER('CR Summer Series Melbourne 2024')
     ),
     1,
-    'Beyond Blue',
-    entry_seq.CURRVAL
+    (
+        SELECT
+            char_name
+        FROM
+            charity
+        WHERE
+            UPPER(char_name) = UPPER('Beyond Blue')
+    ),
+    (
+        SELECT
+            entry_id
+        FROM
+            entry
+        WHERE
+            comp_no = 
+            (
+                SELECT
+                    comp_no
+                FROM
+                    competitor
+                WHERE
+                    comp_phone = '1234567890'
+            )
+            AND carn_date =
+            (
+                SELECT
+                    carn_date
+                FROM
+                    entry
+                WHERE
+                    carn_date =
+                    (
+                        SELECT
+                            carn_date
+                        FROM
+                            carnival
+                        WHERE
+                            UPPER(carn_name) = 
+                                UPPER('CR Summer Series Melbourne 2024')
+                )
+            )
+    )
+    
 );    
 
 UPDATE ENTRY
@@ -193,53 +234,58 @@ COMMIT;
 (d) 
 */
 
-ALTER TABLE entry DROP CONSTRAINT team_entry;
-
-ALTER TABLE entry 
-    ADD CONSTRAINT fk_entry_team FOREIGN KEY ( team_id )
-        REFERENCES team ( team_id )
-            ON DELETE SET NULL;
-
-DELETE FROM team
-WHERE
-    team_id = 
+UPDATE entry
+SET 
+    team_id = NULL
+WHERE team_id = 
     (
         SELECT
             team_id
-        FROM    
-            team
-        WHERE
-            UPPER(team_name) = UPPER('Kenya Speedstars')
-    );
-    
-DELETE FROM entry
-WHERE
-    entry_id = 
-    (
-        SELECT
-            entry_id
         FROM
-            entry
-        WHERE
-            carn_date = 
-            (
-                SELECT
-                    carn_date
-                FROM    
-                    carnival
-                WHERE
-                    UPPER(carn_name) = UPPER('CR Summer Series Melbourne 2024')
-            )
-            AND comp_no =
-            (
-                SELECT
-                    comp_no
-                FROM
-                    competitor
-                WHERE
-                    comp_phone = '1234567890'
-            )
+            team
+        WHERE UPPER(team_name) = UPPER('Kenya Speedsters')
+        AND carn_date = 
+        (
+            SELECT
+                carn_date
+            FROM
+                carnival
+            WHERE UPPER(carn_name) = UPPER('CR Summer Series Melbourne 2024')
+        )
     );
     
 COMMIT;
 
+DELETE FROM team
+WHERE 
+    UPPER(team_name) = UPPER('Kenya Speedsters')
+    AND carn_date = 
+    (
+        SELECT
+            carn_date
+        FROM
+            carnival
+        WHERE 
+            UPPER(carn_name) = UPPER('CR Summer Series Melbourne 2024')
+    );
+
+DELETE FROM entry
+WHERE 
+    comp_no = 
+    (
+        SELECT
+            comp_no
+        FROM
+            competitor
+        WHERE comp_phone = '1234567890'
+    )
+    AND carn_date = 
+    (
+        SELECT
+            carn_date
+        FROM
+            carnival
+        WHERE UPPER(carn_name) = UPPER('CR Summer Series Melbourne 2024')
+    );
+
+COMMIT;
