@@ -20,12 +20,10 @@
 (a)
 */
 
-CREATE UNIQUE INDEX comp_carn__idx ON 
-    entry (
-    comp_no,
-    carn_date
-    );
-
+ALTER TABLE entry
+    ADD CONSTRAINT competitor_event_singular
+        UNIQUE (comp_no, carn_date);
+ 
 COMMIT;
 
    

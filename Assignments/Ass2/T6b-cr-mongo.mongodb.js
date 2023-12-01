@@ -3,8 +3,8 @@
 
 // ITO Assignment 2 Task 6b
 
-//Student ID:   22298827
-//Student Name: Christian Morabito
+// Student ID:   22298827
+// Student Name: Christian Morabito
 // Comments for your marker:
 
 // ===================================================================================
@@ -519,12 +519,4 @@ db.events.updateMany(
   // Confirm the change
   db.events.find({ "carnival_date": "01-Feb-2023" });
 
-
-
-
-
 // Illustrate/confirm changes made
-
-
-
-

@@ -1257,13 +1257,6 @@ UPDATE ENTRY
 SET
     team_id = 2
 WHERE
-    entry_id = 4;
-    
-    
-UPDATE ENTRY
-SET
-    team_id = 2
-WHERE
     entry_id = 5;
     
     
@@ -1335,14 +1328,6 @@ SET
     team_id = 6
 WHERE
     entry_id = 17;
-    
-    
-UPDATE ENTRY
-SET
-    team_id = 6
-WHERE
-    entry_id = 18;
-    
 
 UPDATE ENTRY
 SET

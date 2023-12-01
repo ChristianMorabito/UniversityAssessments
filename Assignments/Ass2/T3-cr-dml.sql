@@ -101,39 +101,6 @@ COMMIT;
 (c)
 */
 
-UPDATE entry
-SET
-    eventtype_code = '10K'
-WHERE
-    entry_id = 
-    (
-        SELECT
-            entry_id
-        FROM
-            entry
-        WHERE
-            carn_date = 
-            (
-                SELECT
-                    carn_date
-                FROM    
-                    carnival
-                WHERE
-                    UPPER(carn_name) = UPPER('CR Summer Series Melbourne 2024')
-            )
-            AND comp_no =
-            (
-                SELECT
-                    comp_no
-                FROM
-                    competitor
-                WHERE
-                    comp_phone = '1234567890'
-            )
-    );
-
-    
-
 INSERT INTO TEAM (
     team_id,
     team_name,
@@ -181,23 +148,47 @@ INSERT INTO TEAM (
                 SELECT
                     carn_date
                 FROM
-                    entry
+                    carnival
                 WHERE
-                    carn_date =
-                    (
-                        SELECT
-                            carn_date
-                        FROM
-                            carnival
-                        WHERE
-                            UPPER(carn_name) = 
-                                UPPER('CR Summer Series Melbourne 2024')
-                )
+                    UPPER(carn_name) = UPPER('CR Summer Series Melbourne 2024')
             )
     )
     
 );    
 
+
+UPDATE entry
+SET
+    eventtype_code = '10K'
+WHERE
+    entry_id = 
+    (
+        SELECT
+            entry_id
+        FROM
+            entry
+        WHERE
+            carn_date = 
+            (
+                SELECT
+                    carn_date
+                FROM    
+                    carnival
+                WHERE
+                    UPPER(carn_name) = UPPER('CR Summer Series Melbourne 2024')
+            )
+            AND comp_no =
+            (
+                SELECT
+                    comp_no
+                FROM
+                    competitor
+                WHERE
+                    comp_phone = '1234567890'
+            )
+    );
+
+    
 UPDATE ENTRY
 SET
     team_id = team_seq.CURRVAL
@@ -243,7 +234,7 @@ WHERE team_id =
             team_id
         FROM
             team
-        WHERE UPPER(team_name) = UPPER('Kenya Speedsters')
+        WHERE UPPER(team_name) = UPPER('Kenya Speedstars')
         AND carn_date = 
         (
             SELECT
@@ -258,7 +249,7 @@ COMMIT;
 
 DELETE FROM team
 WHERE 
-    UPPER(team_name) = UPPER('Kenya Speedsters')
+    UPPER(team_name) = UPPER('Kenya Speedstars')
     AND carn_date = 
     (
         SELECT
